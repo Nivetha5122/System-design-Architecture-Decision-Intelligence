@@ -1,0 +1,28 @@
+ARCHDS FINAL V5 — UI / COMPETITION UPGRADE
+
+1. Live Agent Arena
+   - During analysis the UI shows the requirement input flowing into a candidate arena,
+     active agent evaluation, and champion goal.
+   - Agent cards highlight completed/current/pending agents.
+
+2. Competition tab
+   - Candidate battlefield shows every surviving candidate, weighted score, verification,
+     critique findings, refinement state, Pareto state and champion.
+   - Evolution history shows challenger rounds and whether a new champion emerged.
+   - Agent evidence trail exposes the pipeline events returned by the AI service.
+
+3. Overview tournament snapshot
+   - Immediately shows candidate score ordering, Pareto survivors, critical findings,
+     competitive rounds and the final champion.
+
+4. Visual polish
+   - Animated active-agent pulse, pipeline motion, hover transitions and score bars.
+   - Fixed primary action text contrast in panel headers (e.g. New analysis).
+   - Existing clean UML architecture diagram is preserved.
+
+5. Backend messaging
+   - Updated the persisted execution message from nine-agent wording to the actual
+     18-agent architecture tournament wording.
+
+The core requirement-driven pipeline remains unchanged and continues to generate the
+architecture from user requirements rather than selecting a static generic answer.

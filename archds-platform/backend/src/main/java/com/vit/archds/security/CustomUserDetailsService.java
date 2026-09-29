@@ -1,0 +1,2 @@
+package com.vit.archds.security; import com.vit.archds.repository.UserRepository; import org.springframework.security.core.userdetails.*; import org.springframework.stereotype.Service;
+@Service public class CustomUserDetailsService implements UserDetailsService { private final UserRepository repo; public CustomUserDetailsService(UserRepository r){repo=r;} public UserDetails loadUserByUsername(String e)throws UsernameNotFoundException{return repo.findByEmail(e.toLowerCase()).orElseThrow(()->new UsernameNotFoundException("User not found"));}}
