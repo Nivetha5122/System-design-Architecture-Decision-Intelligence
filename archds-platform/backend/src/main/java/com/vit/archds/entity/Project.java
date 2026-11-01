@@ -1,0 +1,5 @@
+package com.vit.archds.entity;
+import jakarta.persistence.*; import java.time.Instant;
+@Entity @Table(name="projects",indexes=@Index(name="idx_projects_owner",columnList="owner_id"))
+public class Project { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @Column(nullable=false,length=160) private String name; @Column(length=4000) private String description; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="owner_id",nullable=false) private User owner; @Column(nullable=false,updatable=false) private Instant createdAt=Instant.now(); @Column(nullable=false) private Instant updatedAt=Instant.now();
+ public Project(){} public Project(String n,String d,User o){name=n;description=d;owner=o;} public Long getId(){return id;} public String getName(){return name;} public String getDescription(){return description;} public User getOwner(){return owner;} public Instant getCreatedAt(){return createdAt;} public Instant getUpdatedAt(){return updatedAt;} public void setName(String v){name=v;updatedAt=Instant.now();} public void setDescription(String v){description=v;updatedAt=Instant.now();}}

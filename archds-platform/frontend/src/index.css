@@ -1,0 +1,2 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{font-family:'DM Sans',Inter,system-ui,sans-serif;color:#17213a;background:#f4f7fc;font-synthesis:none;text-rendering:optimizeLegibility}*{box-sizing:border-box}html,body,#root{margin:0;min-width:320px;min-height:100%;background:#f4f7fc}button,input,textarea,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}textarea{resize:vertical}

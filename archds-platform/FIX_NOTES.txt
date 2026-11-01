@@ -1,0 +1,13 @@
+ARCHDS FIXED V3.1
+
+Primary fix: Spring Boot is configured with SNAKE_CASE JSON, so AnalysisJob fields are returned as job_id/current_stage/error_message. The previous frontend polled job.jobId, producing /api/jobs/undefined and repeated 404s.
+
+This version normalizes both camelCase and snake_case job fields in frontend/src/services/api.js and refuses to request a missing job ID. The project polling code also accepts both field styles.
+
+Run locally on Windows:
+1. Start ai-service on port 8000.
+2. Start backend on port 8080.
+3. Start frontend on port 5173.
+Or run scripts\START-ARCHDS.cmd.
+
+Use scripts\VERIFY-ARCHDS.cmd to check health endpoints.

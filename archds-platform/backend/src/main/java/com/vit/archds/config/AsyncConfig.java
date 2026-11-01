@@ -1,0 +1,2 @@
+package com.vit.archds.config; import org.springframework.context.annotation.*; import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor; import java.util.concurrent.Executor;
+@Configuration public class AsyncConfig { @Bean(name="analysisExecutor") Executor analysisExecutor(){ThreadPoolTaskExecutor e=new ThreadPoolTaskExecutor();e.setCorePoolSize(2);e.setMaxPoolSize(4);e.setQueueCapacity(20);e.setThreadNamePrefix("analysis-");e.initialize();return e;} }
