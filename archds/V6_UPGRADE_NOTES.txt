@@ -1,0 +1,20 @@
+ARCHDS FINAL V6 — Requirement-Derived Competition + Blueprint UI
+
+Major changes:
+1. The competition page now provides a round-by-round replay with side-by-side challenger/champion cards and ranked survivors.
+2. Each competition round records ranked candidate snapshots, challenger score/name, previous champion score and champion outcome.
+3. The architecture generator derives business capability components from arbitrary functional requirements instead of relying only on a fixed keyword list.
+4. Every generated capability is mapped to requirement IDs (R1, R2, ...), and those IDs are displayed directly on the UML blueprint.
+5. The architecture blueprint uses clean layered UML lanes, orthogonal dependency paths, requirement badges and traceability metrics.
+6. PlantUML output includes requirement IDs beside requirement-derived components.
+7. Cross-cutting controls (security, resilience, observability, DR) are included only when corresponding quality drivers are detected.
+8. Button typography is normalized with font: inherit and all new controls have consistent hover/disabled states.
+9. The existing human-in-the-loop, Pareto optimization, critique, verification, stress lab, ADR, traceability and decision flows are preserved.
+
+Research concept demonstrated visually:
+Requirements -> Requirement Intelligence -> Parallel Architecture Candidates -> Independent Critic Panel -> Evidence-driven Challenger -> Re-evaluation -> Pareto Survivors -> Champion -> Requirement-derived UML Blueprint -> Explainable Decision
+
+Validation:
+- AI tests: 7 passed.
+- Custom arbitrary-domain pipeline smoke test completed successfully.
+- Frontend production build was not executed in this environment because dependency installation timed out; run `npm install` then `npm run build` on Windows if a production build is required.

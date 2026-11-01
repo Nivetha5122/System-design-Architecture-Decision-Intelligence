@@ -1,0 +1,3 @@
+package com.vit.archds.config;
+import org.springframework.beans.factory.annotation.Value; import org.springframework.context.annotation.*; import org.springframework.http.client.SimpleClientHttpRequestFactory; import org.springframework.web.client.RestClient;
+@Configuration public class RestClientConfig { @Bean RestClient aiRestClient(@Value("${app.ai-service.base-url}") String base,@Value("${app.ai-service.timeout-ms}") int timeout){SimpleClientHttpRequestFactory f=new SimpleClientHttpRequestFactory();f.setConnectTimeout(timeout);f.setReadTimeout(timeout);return RestClient.builder().baseUrl(base).requestFactory(f).build();} }

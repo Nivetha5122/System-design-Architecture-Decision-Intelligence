@@ -1,0 +1,34 @@
+@startuml
+left to right direction
+actor User
+component "React Frontend" as FE
+component "Spring Boot API" as BE
+component "Async Analysis Job" as JOB
+component "FastAPI Multi-Agent Orchestrator" as AI
+component "Requirement Agent" as RA
+component "Retrieval Agent" as RET
+component "Generation Agent" as GEN
+component "Evaluation Agent" as EVA
+component "NSGA-II Optimizer" as OPT
+component "Critique Agent" as CRI
+component "Verification Agent" as VER
+component "Refinement Agent" as REF
+component "Explanation Agent" as EXP
+database PostgreSQL as DB
+User --> FE
+FE --> BE
+BE --> JOB
+JOB --> AI
+AI --> RA
+RA --> RET
+RET --> GEN
+GEN --> EVA
+EVA --> OPT
+OPT --> CRI
+CRI --> VER
+VER --> REF
+REF --> EVA
+VER --> EXP
+BE --> DB
+AI --> DB : knowledge/artifacts via API layer
+@enduml

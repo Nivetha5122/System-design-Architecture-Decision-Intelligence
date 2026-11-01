@@ -1,0 +1,1 @@
+PostgreSQL schema is managed by Spring Data JPA for portability between local H2 development and PostgreSQL Docker deployment. Core data remains relational; JSON columns store variable AI artifacts such as component lists, score reasoning and PlantUML source.
